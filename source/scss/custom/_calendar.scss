@@ -13,7 +13,7 @@
   color: #000;
   font-size: 72px;
   font-weight: 600;
-  background: #fff;
+  //background: #fff;
 
   span {
     display: block;
@@ -22,7 +22,7 @@
 }
 
 #calendar {
-  width: 305px;
+  width: 322px;
   height: 322px;
 }
 
@@ -30,6 +30,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  width: 322px;
 }
 
 .calendar-label {
@@ -37,4 +38,9 @@
   position: absolute;
   top: 130px;
   left: 100px;
+}
+
+
+.bb-content, .bb-item  {
+  background: none !important;
 }
