@@ -15,10 +15,10 @@ jQuery(function($) {
 			var s = app.count.find("strong");
 			var i = parseInt(s.data('count')) + 1;
 
-		  	s.text(app.sanitize(i)).data('count', i);;
+			s.text(app.sanitize(i)).data('count', i);;
 			localStorage.setItem('count', i);
 
-            return app.count.fadeIn();
+			return app.count.fadeIn();
 		},
 
 		sanitize: function(number) {
@@ -62,6 +62,14 @@ jQuery(function($) {
 			});
 		},
 
+		donate: function() {
+			$(".donate").on('click', ".donate-button", function(){
+				$(this).fadeOut(function(){
+					$(".donate-yandex").fadeIn().css("display","block");;
+				});
+			});
+		},
+
 		mute: function() {
 			var player = app.video.data('ytPlayer').player;
 
@@ -77,6 +85,7 @@ jQuery(function($) {
 			app.get();
 			app.run('0T4fRpS-tbg');
 
+			app.donate();
 			app.sound.on('click', app.mute);
 			app.calendar.on('click', app.turn);
 		}

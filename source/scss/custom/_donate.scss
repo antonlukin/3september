@@ -1,0 +1,37 @@
+.donate {
+  margin-top: 50px;
+  min-height: 100px;
+
+  iframe {
+    display: block;
+  }
+
+  .donate-yandex {
+    display: none;
+
+    margin: 0 auto;
+  }
+
+  .donate-button {
+    display: block;
+    cursor: pointer;
+    outline: none;
+
+    margin: 0 auto;
+    width: 210px;
+    padding: 10px 0;
+
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+
+    background-color: #F46262;
+
+    border: 0;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: #993939;
+    }
+  }
+}
