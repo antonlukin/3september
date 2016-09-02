@@ -38,45 +38,44 @@
 
 			<h1 id="count">Я календарь перевернул <strong data-count="0">1 раз</strong></h1>
 			<h2 id="every">Всего календарь перевернули <strong>0 раз</strong> и снова третье сентября&hellip;</h2>
-
-			<div class="rambler-share"></div>
-
-			<script>
-				(function() {
-				var init = function() {
-				RamblerShare.init('.rambler-share', {
-					"style": {
-						"buttonHeight": 41,
-						"iconSize": 20,
-						"borderRadius": 3,
-						"counterSize": 15,
-						"font": "Roboto"
-					},
-					"utm": "utm_source=social",
-					"counters": false,
-					"buttons": [
-						"vkontakte",
-						"facebook",
-						"odnoklassniki",
-						"twitter",
-						"googleplus",
-						"telegram"
-					]
-				});
-				};
-				var script = document.createElement('script');
-				script.onload = init;
-				script.async = true;
-				script.src = 'https://developers.rambler.ru/likes/widget.js';
-				document.head.appendChild(script);
-				})();
-			</script>
-
 		</div>
 
 		<span id="sound" class="sound"></span>
+
+		<div class="rambler-share"></div>
+
+		<script>
+			(function() {
+			var init = function() {
+			RamblerShare.init('.rambler-share', {
+				"style": {
+					"buttonHeight": 41,
+					"iconSize": 20,
+					"borderRadius": 3,
+					"counterSize": 15,
+					"font": "Roboto"
+				},
+				"utm": "utm_source=social",
+				"counters": false,
+				"buttons": [
+					"vkontakte",
+					"facebook",
+					"odnoklassniki",
+					"twitter",
+					"googleplus",
+					"telegram"
+				]
+			});
+			};
+			var script = document.createElement('script');
+			script.onload = init;
+			script.async = true;
+			script.src = 'https://developers.rambler.ru/likes/widget.js';
+			document.head.appendChild(script);
+			})();
+		</script>
 	</div>
-	
+
 	<script src="assets/script.min.js"></script>
 	<script src="bookblock/js/modernizr.custom.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
