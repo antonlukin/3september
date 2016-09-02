@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da650a68-251b-4eb3-8373-00b5e3b0f7ed" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/style.min.css" afterPath="$PROJECT_DIR$/public/assets/style.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/scss/custom/_calendar.scss" afterPath="$PROJECT_DIR$/source/scss/custom/_calendar.scss" />
     </list>
     <ignored path="3september.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,8 +29,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+            <state relative-caret-position="231">
+              <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -45,6 +48,7 @@
         <option value="$PROJECT_DIR$/source/js/flip.js" />
         <option value="$PROJECT_DIR$/gulp/gulpfile.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/source/scss/custom/_calendar.scss" />
         <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
@@ -206,12 +210,12 @@
       <option name="presentableId" value="Default" />
       <updated>1472848829946</updated>
       <workItem from="1472848831435" duration="2943000" />
-      <workItem from="1472851776003" duration="198000" />
+      <workItem from="1472851776003" duration="1083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3141000" />
+    <option name="totallyTimeSpent" value="4026000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1600" height="877" extended-state="6" />
@@ -315,10 +319,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/scss/custom/_calendar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <marker date="1472852759312" expanded="true" signature="10:362" ph="{...}" />
+            <marker date="1472852759312" expanded="true" signature="314:360" ph="{...}" />
+            <marker date="1472852759312" expanded="true" signature="374:410" ph="{...}" />
+            <marker date="1472852759312" expanded="true" signature="427:473" ph="{...}" />
+            <marker date="1472852759312" expanded="true" signature="491:559" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+        <state relative-caret-position="231">
+          <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
           <folding />
         </state>
       </provider>
