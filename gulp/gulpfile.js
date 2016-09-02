@@ -32,9 +32,12 @@ gulp.task('scss', function() {
 
 gulp.task('js', function() {
     gulp.src([
+			 path.source + '/js/modernizr.custom.js',
 			 path.source + '/js/jquery.min.js',
 			 path.source + '/js/jquery.youtubebackground.js',
-			 path.source + '/js/custom.js'
+			 path.source + '/js/jquery.bookblock.min.js',
+			 path.source + '/js/custom.js',
+			 path.source + '/js/flip.js'
 		])
         .pipe(plumber())
 		.pipe(uglify())
