@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da650a68-251b-4eb3-8373-00b5e3b0f7ed" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/images/favicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/images/share-me.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/favicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/images/share-me.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulp/gulpfile.js" afterPath="$PROJECT_DIR$/gulp/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/script.min.js" afterPath="$PROJECT_DIR$/public/assets/script.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/style.min.css" afterPath="$PROJECT_DIR$/public/assets/style.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/js/custom.js" afterPath="$PROJECT_DIR$/source/js/custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/scss/custom/_likes.scss" afterPath="$PROJECT_DIR$/source/scss/custom/_likes.scss" />
     </list>
     <ignored path="3september.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,9 +35,11 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="77" column="34" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
-              <folding />
+            <state relative-caret-position="87">
+              <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+              <folding>
+                <element signature="e#1829#1837#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -247,12 +257,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1472848829946</updated>
-      <workItem from="1472848831435" duration="1928000" />
+      <workItem from="1472848831435" duration="2103000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1928000" />
+    <option name="totallyTimeSpent" value="2103000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1600" height="877" extended-state="6" />
@@ -297,9 +307,11 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="77" column="34" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="87">
+          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+          <folding>
+            <element signature="e#1829#1837#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

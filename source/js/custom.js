@@ -13,9 +13,10 @@ jQuery(function($) {
 			$.post("/app", {increment: 1});
 
 			var s = app.count.find("strong");
-			var i = s.data('count') + 1;
+			var i = parseInt(s.data('count')) + 1;
 
 		  	s.text(app.sanitize(i)).data('count', i);;
+			localStorage.setItem('count', i);
 
             return app.count.fadeIn();
 		},
@@ -28,6 +29,11 @@ jQuery(function($) {
 		},
 
 		get: function() {
+			if(localStorage.getItem('count')) {
+				app.count.find("strong").data('count', parseInt(localStorage.getItem('count')) - 1);
+				app.turn();
+			}
+
 			$.ajax({
 				type: 'GET', url: '/app', timeout: 5000,
 				success: function(data){

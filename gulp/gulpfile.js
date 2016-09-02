@@ -42,9 +42,14 @@ gulp.task('js', function() {
         .pipe(gulp.dest(path.assets + '/'));
 });
 
+gulp.task('images', function() {
+    gulp.src([path.source + '/images/**/*'])
+		.pipe(flatten())
+        .pipe(gulp.dest(path.assets + '/images/'));
+});
 
 gulp.task('watch', function() {
 	gulp.watch(path.source + '/**/*', ['scss', 'js']);
 });
 
-gulp.task('default', ['scss', 'js', 'watch']);
+gulp.task('default', ['scss', 'js', 'watch', 'images']);
