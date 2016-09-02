@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da650a68-251b-4eb3-8373-00b5e3b0f7ed" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/source/scss/bookblock-default.scss" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/style.min.css" afterPath="$PROJECT_DIR$/public/assets/style.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/scss/app.scss" afterPath="$PROJECT_DIR$/source/scss/app.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/scss/custom/_calendar.scss" afterPath="$PROJECT_DIR$/source/scss/custom/_calendar.scss" />
     </list>
     <ignored path="3september.iws" />
@@ -26,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/index.html">
+      <file leaf-file-name="_calendar.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/scss/custom/_calendar.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+            <state relative-caret-position="285">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -48,8 +50,8 @@
         <option value="$PROJECT_DIR$/source/js/flip.js" />
         <option value="$PROJECT_DIR$/gulp/gulpfile.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/source/scss/custom/_calendar.scss" />
         <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/source/scss/custom/_calendar.scss" />
       </list>
     </option>
   </component>
@@ -210,12 +212,12 @@
       <option name="presentableId" value="Default" />
       <updated>1472848829946</updated>
       <workItem from="1472848831435" duration="2943000" />
-      <workItem from="1472851776003" duration="1083000" />
+      <workItem from="1472851776003" duration="1198000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4026000" />
+    <option name="totallyTimeSpent" value="4141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1600" height="877" extended-state="6" />
@@ -319,24 +321,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/scss/custom/_calendar.scss">
+    <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        <state relative-caret-position="249">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
           <folding>
-            <marker date="1472852759312" expanded="true" signature="10:362" ph="{...}" />
-            <marker date="1472852759312" expanded="true" signature="314:360" ph="{...}" />
-            <marker date="1472852759312" expanded="true" signature="374:410" ph="{...}" />
-            <marker date="1472852759312" expanded="true" signature="427:473" ph="{...}" />
-            <marker date="1472852759312" expanded="true" signature="491:559" ph="{...}" />
+            <marker date="1472852788976" expanded="true" signature="21:1128" ph="..." />
+            <marker date="1472852788976" expanded="true" signature="1135:2917" ph="..." />
+            <marker date="1472852788976" expanded="true" signature="1220:2439" ph="..." />
+            <marker date="1472852788976" expanded="true" signature="1244:1695" ph="..." />
+            <marker date="1472852788976" expanded="true" signature="1289:1495" ph="..." />
+            <marker date="1472852788976" expanded="true" signature="1324:1485" ph="..." />
+            <marker date="1472852788976" expanded="true" signature="1432:1474" ph="..." />
+            <marker date="1472852788976" expanded="false" signature="1674:1682" ph="…" />
+            <marker date="1472852788976" expanded="true" signature="1786:2431" ph="..." />
+            <marker date="1472852788976" expanded="true" signature="1803:2416" ph="{...}" />
+            <marker date="1472852788976" expanded="true" signature="1830:2208" ph="{...}" />
+            <marker date="1472852788976" expanded="true" signature="1871:2201" ph="{&quot;utm&quot;: &quot;utm_source=social&quot;...}" />
+            <marker date="1472852788976" expanded="true" signature="1886:2009" ph="{&quot;font&quot;: &quot;Roboto&quot;...}" />
+            <marker date="1472852788976" expanded="true" signature="2081:2196" ph="[...]" />
+            <marker date="1472852788976" expanded="true" signature="2496:2909" ph="..." />
+            <marker date="1472852788976" expanded="true" signature="2525:2747" ph="{...}" />
+            <marker date="1472852788976" expanded="true" signature="2576:2617" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
+    <entry file="file://$PROJECT_DIR$/source/scss/custom/_calendar.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+        <state relative-caret-position="285">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
