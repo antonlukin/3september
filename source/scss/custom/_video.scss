@@ -1,0 +1,52 @@
+.background-video {
+  position: fixed;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  background-position: top center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+video,
+source {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.loaded .ytplayer-container {
+  display: block;
+}
+
+.ytplayer-container {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  min-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 3;
+}
+
+.ytplayer-shield {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.ytplayer-player {
+  position: absolute;
+}
+

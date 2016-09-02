@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>3 сентября — день, когда горят костры рябин.</title>
+  <meta  name="description" content="Я календарь переверну и снова третье сентября. На фото я твое взгляну и снова третье сентября.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.min.css">
+</head>
+<body>
+
+	<div id="background-video" class="background-video"></div>
+
+	<div class="wrapper">
+		<div class="content">
+
+			<div id="calendar" class="calendar">
+				3
+			</div>
+
+			<h1 id="count">Я календарь перевернул <strong data-count="0">1 раз</strong></h1>
+			<h2 id="every">Всего календарь перевернули <strong>0</strong> раз и снова третье сентября&hellip;</h2>
+
+			<div class="rambler-share"></div>
+
+			<script>
+				(function() {
+				var init = function() {
+				RamblerShare.init('.rambler-share', {
+					"style": {
+						"buttonHeight": 41,
+						"iconSize": 20,
+						"borderRadius": 3,
+						"counterSize": 15,
+						"font": "Roboto"
+					},
+					"utm": "utm_source=social",
+					"counters": false,
+					"buttons": [
+						"vkontakte",
+						"facebook",
+						"odnoklassniki",
+						"twitter",
+						"googleplus",
+						"telegram"
+					]
+				});
+				};
+				var script = document.createElement('script');
+				script.onload = init;
+				script.async = true;
+				script.src = 'https://developers.rambler.ru/likes/widget.js';
+				document.head.appendChild(script);
+				})();
+			</script>
+
+		</div>
+
+		<span id="sound" class="sound"></span>
+	</div>
+
+	<script src="/assets/script.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-30407430-4', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+</html>

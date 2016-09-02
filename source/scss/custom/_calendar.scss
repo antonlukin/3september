@@ -1,0 +1,24 @@
+.calendar {
+  position: relative;
+  box-sizing: border-box;
+
+  margin: 0 auto;
+
+  width: 220px;
+  height: 250px;
+  padding-top: 50px;
+  margin-bottom: 50px;
+
+  text-align: center;
+  color: #000;
+  font-size: 72px;
+  font-weight: 600;
+  background: #fff;
+  border: solid 4px #aaa;
+  border-radius: 3px;
+
+  span {
+    display: block;
+    font-size: 24px;
+  }
+}

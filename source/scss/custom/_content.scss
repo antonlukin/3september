@@ -1,0 +1,41 @@
+.wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background: rgba(0,0,20,0.7);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    position: relative;
+    width: 100%;
+
+    max-width: 800px;
+  }
+
+  h1 {
+    display: none;
+
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  h2 {
+    display: none;
+
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .ramber-share {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
