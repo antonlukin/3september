@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da650a68-251b-4eb3-8373-00b5e3b0f7ed" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/3september.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/style.min.css" afterPath="$PROJECT_DIR$/public/assets/style.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/scss/custom/_likes.scss" afterPath="$PROJECT_DIR$/source/scss/custom/_likes.scss" />
     </list>
     <ignored path="3september.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gulp/gulpfile.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="393">
+              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -53,9 +43,9 @@
       <list>
         <option value="$PROJECT_DIR$/source/scss/app.scss" />
         <option value="$PROJECT_DIR$/source/js/flip.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/gulp/gulpfile.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -216,12 +206,12 @@
       <option name="presentableId" value="Default" />
       <updated>1472848829946</updated>
       <workItem from="1472848831435" duration="2943000" />
-      <workItem from="1472851776003" duration="49000" />
+      <workItem from="1472851776003" duration="198000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2992000" />
+    <option name="totallyTimeSpent" value="3141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1600" height="877" extended-state="6" />
@@ -291,30 +281,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-594">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-          <folding>
-            <marker date="1472851753143" expanded="true" signature="21:1129" ph="..." />
-            <marker date="1472851753143" expanded="true" signature="1136:3456" ph="..." />
-            <marker date="1472851753143" expanded="true" signature="1221:1685" ph="..." />
-            <marker date="1472851753143" expanded="true" signature="1245:1685" ph="..." />
-            <marker date="1472851753143" expanded="true" signature="1290:1492" ph="..." />
-            <marker date="1472851753143" expanded="true" signature="1671:1679" ph="…" />
-            <marker date="1472851753143" expanded="true" signature="1734:2408" ph="..." />
-            <marker date="1472851753143" expanded="true" signature="1752:2392" ph="{...}" />
-            <marker date="1472851753143" expanded="true" signature="1780:2178" ph="{...}" />
-            <marker date="1472851753143" expanded="true" signature="1822:2170" ph="{&quot;utm&quot;: &quot;utm_source=social&quot;...}" />
-            <marker date="1472851753143" expanded="true" signature="1838:1967" ph="{&quot;font&quot;: &quot;Roboto&quot;...}" />
-            <marker date="1472851753143" expanded="true" signature="2042:2164" ph="[...]" />
-            <marker date="1472851753143" expanded="true" signature="3035:3448" ph="..." />
-            <marker date="1472851753143" expanded="true" signature="3064:3286" ph="{...}" />
-            <marker date="1472851753143" expanded="true" signature="3115:3156" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gulp/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -335,6 +301,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <marker date="1472851560396" expanded="true" signature="329:385" ph="{&quot;source&quot;: '../source'...}" />
+            <marker date="1472851560396" expanded="true" signature="417:789" ph="{...}" />
+            <marker date="1472851560396" expanded="true" signature="510:570" ph="{&quot;outputStyle&quot;: 'compressed'...}" />
+            <marker date="1472851560396" expanded="true" signature="592:638" ph="{...}" />
+            <marker date="1472851560396" expanded="true" signature="696:740" ph="{&quot;compatibility&quot;: 'ie8'...}" />
+            <marker date="1472851560396" expanded="true" signature="820:1223" ph="{...}" />
+            <marker date="1472851560396" expanded="true" signature="835:1093" ph="[...]" />
+            <marker date="1472851560396" expanded="true" signature="1258:1377" ph="{...}" />
+            <marker date="1472851560396" expanded="true" signature="1411:1466" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding />
         </state>
       </provider>
