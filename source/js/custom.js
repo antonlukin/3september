@@ -22,7 +22,7 @@ jQuery(function($) {
 		},
 
 		sanitize: function(number) {
-			if(number < 2 || number > 4)
+			if(number % 10 < 2 || number % 10 > 4)
 				return number + " раз";
 
 			return number + " раза";
