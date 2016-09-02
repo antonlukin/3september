@@ -14,11 +14,27 @@
   font-size: 72px;
   font-weight: 600;
   background: #fff;
-  border: solid 4px #aaa;
-  border-radius: 3px;
 
   span {
     display: block;
     font-size: 24px;
   }
+}
+
+#calendar {
+  width: 305px;
+  height: 322px;
+}
+
+.bb-custom-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.calendar-label {
+  z-index: 5;
+  position: absolute;
+  top: 130px;
+  left: 100px;
 }
