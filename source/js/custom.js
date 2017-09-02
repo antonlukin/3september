@@ -21,11 +21,18 @@ jQuery(function($) {
 			return app.count.fadeIn();
 		},
 
-		sanitize: function(number) {
-			if(number % 10 < 2 || number % 10 > 4)
-				return number + " раз";
+		spaces: function(x) {
+			return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+		},
 
-			return number + " раза";
+		sanitize: function(number) {
+			if(number > 9 && number < 20)
+				return app.spaces(number) + " раз";
+
+			if(number % 10 < 2 || number % 10 > 4)
+				return app.spaces(number) + " раз";
+
+			return app.spaces(number) + " раза";
 		},
 
 		get: function() {

@@ -1,0 +1,21 @@
+.copy {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  text-decoration: none;
+
+  a {
+    color: #999;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+} 
