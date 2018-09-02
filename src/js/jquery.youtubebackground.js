@@ -25,13 +25,13 @@ if (typeof Object.create !== "function") {
       // Load Youtube API
       var tag = document.createElement('script'),
       head = document.getElementsByTagName('head')[0];
-      
+
       if(window.location.origin == 'file://') {
-        tag.src = 'http://www.youtube.com/iframe_api';
+        tag.src = 'https://www.youtube.com/iframe_api';
       } else {
         tag.src = '//www.youtube.com/iframe_api';
       }
-      
+
       head.appendChild(tag);
 
       // Clean up Tags.
@@ -46,7 +46,7 @@ if (typeof Object.create !== "function") {
         // Prevents Ready Event from being called twice
         window.loadingPlayer = true;
 
-        
+
         // Creates deferred so, other players know when to wait.
         window.dfd = $.Deferred();
         window.onYouTubeIframeAPIReady = function() {
@@ -256,7 +256,7 @@ if (typeof Object.create !== "function") {
      */
     onYouTubeIframeAPIReady: function onYouTubeIframeAPIReady() {
       var self = this;
-      self.player = new window.YT.Player(self.holderID, self.options);  
+      self.player = new window.YT.Player(self.holderID, self.options);
     },
 
     /**
