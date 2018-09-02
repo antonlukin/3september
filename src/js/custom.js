@@ -25,9 +25,9 @@ jQuery(function($) {
       s.text(app.sanitize(i)).data('count', i);;
       localStorage.setItem('count', i);
 
-	  if(typeof ga !== 'undefined') {
-		  ga('send', 'event', 'User interaction', 'click', 'Calendar');
-	  }
+     if(typeof ga !== 'undefined') {
+       ga('send', 'event', 'User interaction', 'click', 'Calendar');
+     }
 
       return app.count.fadeIn();
     },
@@ -53,11 +53,11 @@ jQuery(function($) {
         app.count.find("strong").data('count', parseInt(localStorage.getItem('count')) - 1);
       }
 
-	  var s = app.count.find("strong");
-	  var i = parseInt(s.data('count')) + 1;
-
-	  s.text(app.sanitize(i)).data('count', i);;
-	  localStorage.setItem('count', i);
+      var s = app.count.find("strong");
+      var i = parseInt(s.data('count')) + 1;
+    
+      s.text(app.sanitize(i)).data('count', i);;
+      localStorage.setItem('count', i);
 
       $.ajax({
         type: 'GET', url: '/app', timeout: 5000,
@@ -72,7 +72,7 @@ jQuery(function($) {
         }
       }, 'json');
 
-	  return app.count.fadeIn();   
+      return app.count.fadeIn();   
     },
 
     run: function(id) {
@@ -84,11 +84,11 @@ jQuery(function($) {
         controls: 0,
         autohide: 0,
         playerVars: {
-			rel: 0,
-			loop: 1,
-			showinfo: 0,
-			modestbranding: 1
-		},
+          rel: 0,
+          loop: 1,
+          showinfo: 0,
+          modestbranding: 1
+        },
         events: {
           'onReady': app.callback
         }
@@ -100,9 +100,9 @@ jQuery(function($) {
 
       app.sound.toggleClass("mute");
  
-	  if(typeof ga !== 'undefined') {
-		  ga('send', 'event', 'User interaction', 'click', 'Volume');
-	  }    
+      if(typeof ga !== 'undefined') {
+        ga('send', 'event', 'User interaction', 'click', 'Volume');
+      }    
 
       if(app.sound.hasClass("mute")) {
         return player.mute();
@@ -110,11 +110,11 @@ jQuery(function($) {
 
       return player.unMute();
     },
-
+    
     init: function(){
       app.get();
       app.run('0T4fRpS-tbg');
-
+    
       app.sound.on('click', app.mute);
       app.calendar.on('click', app.turn);
     }
