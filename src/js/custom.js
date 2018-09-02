@@ -25,6 +25,10 @@ jQuery(function($) {
       s.text(app.sanitize(i)).data('count', i);;
       localStorage.setItem('count', i);
 
+	  if(typeof ga !== 'undefined') {
+		  ga('send', 'event', 'User interaction', 'click', 'Calendar');
+	  }
+
       return app.count.fadeIn();
     },
 
@@ -95,6 +99,10 @@ jQuery(function($) {
       var player = app.video.data('ytPlayer').player;
 
       app.sound.toggleClass("mute");
+ 
+	  if(typeof ga !== 'undefined') {
+		  ga('send', 'event', 'User interaction', 'click', 'Volume');
+	  }    
 
       if(app.sound.hasClass("mute")) {
         return player.mute();
