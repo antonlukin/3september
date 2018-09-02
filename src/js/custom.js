@@ -47,15 +47,13 @@ jQuery(function($) {
     get: function() {
       if(localStorage.getItem('count')) {
         app.count.find("strong").data('count', parseInt(localStorage.getItem('count')) - 1);
-
-        var s = app.count.find("strong");
-        var i = parseInt(s.data('count')) + 1;
-
-        s.text(app.sanitize(i)).data('count', i);;
-        localStorage.setItem('count', i);
-
-        return app.count.fadeIn();
       }
+
+	  var s = app.count.find("strong");
+	  var i = parseInt(s.data('count')) + 1;
+
+	  s.text(app.sanitize(i)).data('count', i);;
+	  localStorage.setItem('count', i);
 
       $.ajax({
         type: 'GET', url: '/app', timeout: 5000,
@@ -69,6 +67,8 @@ jQuery(function($) {
           return app.every.fadeIn();
         }
       }, 'json');
+
+	  return app.count.fadeIn();   
     },
 
     run: function(id) {
@@ -76,11 +76,15 @@ jQuery(function($) {
         fitToBackground: true,
         mute: false,
         videoId: id,
-        modestbranding: 0,
         autoplay: 1,
         controls: 0,
         autohide: 0,
-        playerVars: {rel: 0},
+        playerVars: {
+			rel: 0,
+			loop: 1,
+			showinfo: 0,
+			modestbranding: 1
+		},
         events: {
           'onReady': app.callback
         }
