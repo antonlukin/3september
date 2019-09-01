@@ -15,6 +15,9 @@
   "dependencies": {
     "ws": "^5.1.1"
   },
+  "browserslist": [
+    "ie >= 10", "ff >= 30", "chrome >= 34", "safari >= 7", "opera >= 23", "ios >= 7", "android >= 4.4"
+  ],
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.0",

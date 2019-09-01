@@ -5,7 +5,7 @@ var sass = require('gulp-sass');
 var sassGlob = require('gulp-sass-glob');
 var plumber = require('gulp-plumber');
 var uglify = require('gulp-uglify');
-//var prefix = require('gulp-autoprefixer');
+var prefix = require('gulp-autoprefixer');
 var flatten = require('gulp-flatten');
 var connect = require('gulp-connect');
 
@@ -17,7 +17,7 @@ gulp.task('styles', function (done) {
     .pipe(sass({
       errLogToConsole: true
     }))
-    //.pipe(prefix({ browsers: ['ie >= 10', 'ff >= 30', 'chrome >= 34', 'safari >= 7', 'opera >= 23', 'ios >= 7', 'android >= 4.4'] }))
+    .pipe(prefix())
     .pipe(concat('styles.min.css'))
     .pipe(cleanCss({
       compatibility: 'ie9'
