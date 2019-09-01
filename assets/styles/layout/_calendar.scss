@@ -35,11 +35,11 @@
   }
 
   .calendar__page {
-    @include full-height;
+    @include full-absolute;
 
     .calendar__page-back,
     .calendar__page-front {
-      @include full-height;
+      @include full-absolute;
 
       overflow: hidden;
 
@@ -61,7 +61,7 @@
     }
 
     &.calendar__page--animate {
-      @include full-height;
+      @include full-absolute;
 
       transform-origin: 50% -1px;
       transform-style: preserve-3d;
