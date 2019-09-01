@@ -1,0 +1,18 @@
+.backdrop {
+  @include full-height;
+
+  z-index: -1;
+
+  .backdrop__video {
+    @include full-height;
+
+    object-fit: cover;
+  }
+
+  &:after {
+    @include full-height;
+
+    content: '';
+    background-color: rgba(0, 0, 10, 0.625);
+  }
+}

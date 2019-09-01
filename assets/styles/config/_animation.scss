@@ -1,0 +1,14 @@
+@keyframes flip {
+  0% {
+    transform: rotateX(0);
+  }
+
+  95% {
+    transform: rotateX(245deg);
+  }
+
+  100% {
+    transform: rotateX(260deg);
+    visibility: hidden;
+  }
+}

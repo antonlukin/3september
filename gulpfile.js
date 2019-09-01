@@ -1,48 +1,67 @@
-var gulp      = require('gulp');
-var sass      = require('gulp-sass');
-var concat    = require('gulp-concat');
-var cleanCss  = require('gulp-clean-css');
-var uglify    = require('gulp-uglify');
-var plumber   = require('gulp-plumber');
-var prefix    = require('gulp-autoprefixer');
+var gulp = require('gulp');
+var concat = require('gulp-concat');
+var cleanCss = require('gulp-clean-css');
+var sass = require('gulp-sass');
+var sassGlob = require('gulp-sass-glob');
+var plumber = require('gulp-plumber');
+var uglify = require('gulp-uglify');
+//var prefix = require('gulp-autoprefixer');
+var flatten = require('gulp-flatten');
+var connect = require('gulp-connect');
 
-var path = {
-  source: 'src/',
-  assets: 'app/assets/'
-}
 
-gulp.task('styles', function() {
-  gulp.src([path.source + '/scss/app.scss'])
+gulp.task('styles', function (done) {
+  gulp.src(['./assets/styles/app.scss'])
     .pipe(plumber())
-    .pipe(sass({errLogToConsole: true}))
-    .pipe(prefix({browsers: ['ie >= 10', 'ff >= 30', 'chrome >= 34', 'safari >= 7', 'opera >= 23', 'ios >= 7', 'android >= 4.4']}))
+    .pipe(sassGlob())
+    .pipe(sass({
+      errLogToConsole: true
+    }))
+    //.pipe(prefix({ browsers: ['ie >= 10', 'ff >= 30', 'chrome >= 34', 'safari >= 7', 'opera >= 23', 'ios >= 7', 'android >= 4.4'] }))
     .pipe(concat('styles.min.css'))
-    .pipe(cleanCss({compatibility: 'ie8'}))
-    .pipe(gulp.dest(path.assets))
+    .pipe(cleanCss({
+      compatibility: 'ie9'
+    }))
+    .pipe(gulp.dest('./public/'))
+
+  done();
 })
 
-gulp.task('scripts', function() {
-  gulp.src([
-      path.source + '/js/modernizr.custom.js',
-      path.source + '/js/jquery.min.js',
-      path.source + '/js/jquery.youtubebackground.js',
-      path.source + '/js/jquery.bookblock.min.js',
-      path.source + '/js/custom.js',
-      path.source + '/js/flip.js'
-    ])
+
+gulp.task('scripts', function (done) {
+  gulp.src(['./assets/scripts/*.js'])
     .pipe(plumber())
     .pipe(uglify())
     .pipe(concat('scripts.min.js'))
-    .pipe(gulp.dest(path.assets))
+    .pipe(gulp.dest('./public/'))
+
+  done();
 })
 
-gulp.task('images', function() {
-  gulp.src([path.source + '/images/**/*'])
-    .pipe(gulp.dest(path.assets + '/images/'));
+
+gulp.task('media', function (done) {
+  gulp.src(['./assets/media/*.{jpg,png,mp4}'])
+    .pipe(flatten())
+    .pipe(gulp.dest('./public/media/'));
+
+  done();
 })
 
-gulp.task('watch', function() {
-  gulp.watch(path.source + '/**/*', ['styles', 'scripts']);
+
+gulp.task('watch', function (done) {
+  gulp.watch('./assets/**/*', gulp.series('styles', 'scripts', 'media'));
+
+  done();
 })
 
-gulp.task('default', ['styles', 'scripts', 'images', 'watch']);
+
+gulp.task('connect', function (done) {
+  connect.server({
+    root: './public'
+  });
+
+  done();
+})
+
+
+gulp.task('default', gulp.parallel('connect', 'styles', 'scripts', 'media', 'watch'));
