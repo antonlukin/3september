@@ -6,6 +6,16 @@ $font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "He
 
 
 body {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  height: 100vh;
+  min-height: 30rem;
+  padding: 6rem 2rem;
+
   line-height: 1.375;
   font-size: 16px;
   font-weight: normal;
@@ -16,6 +26,10 @@ body {
 
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: 100%;
+
+  @media screen and (max-width: 479px) {
+    padding: 2rem 2rem 6rem;
+  }
 }
 
 ::selection {

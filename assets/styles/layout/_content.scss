@@ -1,14 +1,6 @@
 .content {
   display: flex;
-  flex-flow: column wrap;
-  align-items: center;
   justify-content: center;
+  flex-flow: row wrap;
   position: relative;
-
-  min-height: 100vh;
-  padding: 6rem 2rem;
-
-  @media screen and (max-width: 479px) {
-    padding: 4rem 2rem 6rem;
-  }
 }

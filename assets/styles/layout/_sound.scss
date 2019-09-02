@@ -3,14 +3,14 @@
   justify-content: space-between;
   align-items: flex-end;
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  top: 1.5rem;
+  left: 1.5rem;
   z-index: 5;
 
   cursor: pointer;
 
   height: 2rem;
-  width: 2.25rem;
+  width: 2rem;
   padding: 0.25rem;
   margin: 0 auto;
   overflow: hidden;
@@ -20,7 +20,7 @@
 
     height: 2px;
     width: 2px;
-    background-color: #fff;
+    background-color: #ddd;
 
     @for $i from 1 through 6 {
       &:nth-child(#{$i}) {

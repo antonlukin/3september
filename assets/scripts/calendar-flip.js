@@ -38,14 +38,14 @@
    */
   function sanitize(number) {
     if (number > 9 && number < 20) {
-      return spaces(number) + " раз";
+      return spaces(number) + " раз";
     }
 
     if (number % 10 < 2 || number % 10 > 4) {
-      return spaces(number) + " раз";
+      return spaces(number) + " раз";
     }
 
-    return spaces(number) + " раза";
+    return spaces(number) + " раза";
   }
 
   /**
