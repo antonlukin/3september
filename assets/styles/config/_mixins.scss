@@ -1,18 +1,7 @@
-@mixin full-absolute {
-  display: block;
+@mixin full-size($display: 'block', $position: 'absolute') {
+  display: $display;
+  position: $position;
 
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-}
-
-@mixin full-fixed {
-  display: block;
-
-  position: fixed;
   top: 0;
   left: 0;
 

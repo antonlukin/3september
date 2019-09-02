@@ -1,0 +1,34 @@
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 1rem;
+
+  width: 100%;
+  padding: 1rem 1rem 1rem;
+
+  border-top: solid 1px rgba(0, 0, 0, .125);
+
+  .footer__copy {
+    margin: 0.5rem 0;
+    font-size: 0.75rem;
+    color: #999;
+
+    .footer__copy-link {
+      margin: 0;
+    }
+  }
+
+  .footer__share {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  @media screen and (max-width: 479px) {
+    margin-top: 2rem;
+  }
+}

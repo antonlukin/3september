@@ -1,0 +1,55 @@
+.share {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  position: relative;
+  user-select: none;
+
+  margin: 0.25rem;
+  padding: 0.5rem;
+
+  border-bottom: none;
+  border-radius: 2px;
+
+  svg {
+    height: 1rem;
+    width: 1rem;
+
+    fill: #fff;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &.share--vkontakte {
+    background-color: #5186bd;
+  }
+
+  &.share--facebook {
+    background-color: #3b5998;
+  }
+
+  &.share--odnoklassniki {
+    background-color: #ee8208;
+  }
+
+  &.share--twitter {
+    background-color: #1da1f2;
+  }
+
+  &.share--telegram {
+    background-color: #0088cc;
+  }
+}

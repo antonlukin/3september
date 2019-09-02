@@ -1,0 +1,43 @@
+.sound {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 5;
+
+  cursor: pointer;
+
+  height: 2rem;
+  width: 2.25rem;
+  padding: 0.25rem;
+  margin: 0 auto;
+  overflow: hidden;
+
+  .sound__bar {
+    display: block;
+
+    height: 2px;
+    width: 2px;
+    background-color: #fff;
+
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        animation-name: dance-#{$i};
+        animation-delay: 0.2s * $i;
+      }
+    }
+
+    animation-duration: 500ms;
+    animation-play-state: running;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  &.sound--stop .sound__bar {
+    animation: none;
+    animation-name: none;
+  }
+}

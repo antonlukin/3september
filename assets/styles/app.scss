@@ -6,8 +6,6 @@ $font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "He
 
 
 body {
-  @include full-fixed;
-
   line-height: 1.375;
   font-size: 16px;
   font-weight: normal;
@@ -21,7 +19,7 @@ body {
 }
 
 ::selection {
-  background-color: rgba(dimgrey, 0.25);
+  background-color: rgba(silver, 0.25);
 }
 
 // Import layout styles

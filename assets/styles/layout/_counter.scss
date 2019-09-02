@@ -1,0 +1,37 @@
+.counter {
+  display: block;
+  position: relative;
+  cursor: default;
+  user-select: none;
+
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+
+  &.counter--title {
+    margin-top: 2.5rem;
+    font-size: 1.625rem;
+
+    @media screen and (max-width: 479px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &.counter--more {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+
+    @media screen and (max-width: 479px) {
+      font-size: 0.875rem;
+    }
+  }
+
+  &.counter--hidden {
+    visibility: hidden;
+  }
+
+  strong {
+    font-weight: 500;
+  }
+}

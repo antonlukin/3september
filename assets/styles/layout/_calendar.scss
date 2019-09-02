@@ -1,14 +1,12 @@
 .calendar {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: relative;
   cursor: pointer;
 
-  width: 12.5rem;
-  height: 14.375rem;
+  width: 13rem;
+  height: 13rem;
 
   perspective: 800px;
-  transform: translate(-50%, -50%);
+  transform: translate3d(0, 0, 0);
 
   &:after, &:before {
     content: '';
@@ -35,19 +33,28 @@
   }
 
   .calendar__page {
-    @include full-absolute;
+    @include full-size;
+
+    &.calendar__page--animate {
+      @include full-size;
+
+      transform-origin: 50% -1px;
+      transform-style: preserve-3d;
+
+      animation: flip 1.25s ease-in forwards;
+    }
 
     .calendar__page-back,
     .calendar__page-front {
-      @include full-absolute;
+      @include full-size;
 
       overflow: hidden;
 
-      background-image: url('/media/calendar.jpg');
+      background-image: url('/images/calendar.jpg');
       background-size: cover;
       background-position: bottom;
 
-      border-radius: 6px;
+      border-radius: 8px;
       backface-visibility: hidden;
     }
 
@@ -59,14 +66,10 @@
       background: #e9e9e9;
       transform: rotateX(180deg);
     }
+  }
 
-    &.calendar__page--animate {
-      @include full-absolute;
-
-      transform-origin: 50% -1px;
-      transform-style: preserve-3d;
-
-      animation: flip 1.25s ease-in forwards;
-    }
+  @media screen and (max-width: 359px) {
+    width: 10rem;
+    height: 10rem;
   }
 }

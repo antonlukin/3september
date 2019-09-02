@@ -1,18 +1,18 @@
 .backdrop {
-  @include full-fixed;
+  @include full-size('block', 'fixed');
 
   z-index: -1;
 
   .backdrop__video {
-    @include full-absolute;
+    @include full-size;
 
     object-fit: cover;
   }
 
   &:after {
-    @include full-absolute;
+    @include full-size;
 
     content: '';
-    background-color: rgba(0, 0, 10, 0.625);
+    background-color: rgba(0, 0, 10, 0.75);
   }
 }
