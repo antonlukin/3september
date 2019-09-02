@@ -16,6 +16,13 @@
    */
   var sound = document.getElementById('sound');
 
+
+  /**
+   * Audio element
+   */
+  var audio = document.getElementById('audio');
+
+
   /**
    * Store user sound choice
    */
@@ -106,17 +113,28 @@
   sound.addEventListener('click', function (e) {
     e.preventDefault();
 
+    muted = true;
+
     if (document.getElementById('audio').paused) {
       muted = false;
-      document.getElementById('audio').play();
-
-      return sound.classList.remove('sound--stop');
+      return audio.play();
     }
 
-    muted = true;
-    document.getElementById('audio').pause();
+    return audio.pause();
+  });
 
-    return sound.classList.add('sound--stop');
+  /**
+   * Handle audio pause event
+   */
+  audio.addEventListener('pause', function() {
+    sound.classList.add('sound--stop');
+  });
+
+  /**
+   * Handle audio play event
+   */
+  audio.addEventListener('playing', function() {
+    sound.classList.remove('sound--stop');
   });
 
   /**
@@ -165,6 +183,7 @@
   window.addEventListener('load', function () {
     return turnover();
   });
+
 
   return connect();
 })();
