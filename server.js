@@ -5,7 +5,7 @@
  *
  * @author      Anton Lukin <anton@lukin.me>
  * @license     MIT License
- * @since       2.0
+ * @since       2.0.0
  */
 
 const websocket = require('ws');
