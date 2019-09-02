@@ -14,12 +14,8 @@
     font-size: 1.625rem;
 
     @media screen and (max-width: 479px) {
-      font-size: 1.5rem;
-    }
-
-    @media screen and (max-width: 359px) {
       margin-top: 1.5rem;
-      font-size: 1.375rem;
+      font-size: 1.25rem;
     }
   }
 
@@ -38,5 +34,9 @@
 
   strong {
     font-weight: 500;
+  }
+
+  @media screen and (max-width: 479px) {
+    letter-spacing: 0;
   }
 }

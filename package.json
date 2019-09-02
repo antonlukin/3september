@@ -13,7 +13,7 @@
     "start": "nodemon server.js"
   },
   "dependencies": {
-    "global": "^4.4.0",
+    "redis": "^2.8.0",
     "ws": "^5.1.1"
   },
   "browserslist": [
