@@ -160,9 +160,9 @@
   }
 
   /**
-   * Flip calendar on load
+   * Flip calendar on window load
    */
-  document.addEventListener('DOMContentLoaded', function () {
+  window.addEventListener('load', function () {
     return turnover();
   });
 
