@@ -72,7 +72,7 @@
     };
 
     client.onerror = function (e) {
-      console.error("WebSocket error observed: " + e);
+      console.error("WebSocket error observed: ", e);
     };
   }
 

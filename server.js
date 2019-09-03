@@ -26,7 +26,7 @@ const database = redis.createClient();
 /**
  * Get current counter from redis
  */
-function getCounter(callback) {
+function sendCounter(socket) {
   let counter = 0;
 
   database.get('3september:counter', function (error, result) {
@@ -34,7 +34,9 @@ function getCounter(callback) {
       counter = parseInt(result);
     }
 
-    return callback(counter);
+    if (socket.readyState === websocket.OPEN) {
+      socket.send(counter);
+    }
   });
 }
 
@@ -44,10 +46,7 @@ function getCounter(callback) {
 server.on('connection', function (socket, req) {
 
   // Send current counter on connect
-  getCounter(function (counter) {
-    socket.send(counter);
-  });
-
+  sendCounter(socket);
 
   // Flip event message
   socket.on('message', function (data, req) {
@@ -60,9 +59,7 @@ server.on('connection', function (socket, req) {
   // Receive event message
   socket.on('message', function (data, req) {
     if (data === 'receive') {
-      getCounter(function (counter) {
-        socket.send(counter);
-      });
+      sendCounter(socket);
     }
   });
 
