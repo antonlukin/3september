@@ -59,7 +59,7 @@
    * Connect the socket
    */
   function connect() {
-    client = new WebSocket('wss://remailer.ru:8000');
+    client = new WebSocket('wss://3september.ru:8000');
 
     client.onmessage = function (e) {
       var more = document.querySelector('.counter--more');
