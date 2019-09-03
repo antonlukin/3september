@@ -44,6 +44,9 @@ function sendCounter(socket) {
  * Setup server connection
  */
 server.on('connection', function (socket, req) {
+  if (req.headers.origin !== 'https://3september.ru') {
+    return socket.close();
+  }
 
   // Send current counter on connect
   sendCounter(socket);
