@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" href="/images/icon-128.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/icon-180.png">
-    <link rel="stylesheet" type="text/css" href="/styles.min.css?v=2019-2">
+    <link rel="stylesheet" type="text/css" href="/styles.min.css?v=2020-1">
 
     <meta name="description" content="Переверни календарь вместе с Михаилом Шуфутинским.">
 
@@ -26,9 +26,15 @@
 </head>
 
 <body>
-    <audio id="audio" preload="auto" loop="loop">
-        <source src="https://ams3.digitaloceanspaces.com/notset/3september.ru/audio.mp3" type="audio/mpeg">
+    <audio id="audio" preload="auto" loop>
+        <source src="/media/audio.mp3" type="audio/mpeg">
     </audio>
+
+    <figure class="background">
+        <video id="video" preload="auto" loop muted playsinline autoplay>
+            <source src="/media/2.mp4" type="video/mp4">
+        </video>
+    </figure>
 
     <a class="about" href="https://github.com/antonlukin/3september" target="_blank" rel="noopener">
         <svg class="about__icon" viewBox="0 0 16 16" version="1.1">
