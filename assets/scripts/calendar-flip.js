@@ -23,9 +23,6 @@
   var video = document.getElementById('video');
 
 
-  //var audio = new Video('/media/audio.mp3');
-  //audio.preload = 'auto';
-
   /**
    * Current user turn counter
    */
@@ -111,8 +108,8 @@
   sound.addEventListener('click', function (e) {
     e.preventDefault();
 
-    // Send sound stop class
-    sound.classList.add('sound--stop');
+    // Update sound classes
+    sound.classList.add('sound--stop', 'sound--clicked');
 
     if (!video.muted) {
       return video.muted = true;
@@ -140,7 +137,7 @@
       }
 
       // Start sound if paused
-      if (video.muted) {
+      if (!sound.classList.contains('sound--clicked') && video.muted) {
         sound.click();
       }
 

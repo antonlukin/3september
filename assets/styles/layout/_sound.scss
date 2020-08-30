@@ -4,13 +4,16 @@
   align-items: center;
 
   top: 1.5rem;
-  left: 1.5rem;
+  right: 1.5rem;
   z-index: 5;
 
   cursor: pointer;
 
-  height: 2rem;
-  width: 2rem;
+  height: 1.75rem;
+  width: 1.75rem;
+  opacity: 0.75;
+
+  transition: opacity 0.25s;
 
   .sound__icon {
     fill: $color-white;
@@ -34,7 +37,6 @@
     border: 0.125rem solid transparent;
     border-right: 0.125rem solid $color-white;
     border-radius: 50%;
-    transition: all 0.25s;
 
     margin: auto;
     top: 0;
@@ -45,25 +47,19 @@
     &.sound__wave--one {
       width: 45%;
       height: 45%;
-
-      animation: wave-one 1.75s infinite;
     }
 
     &.sound__wave--two {
       width: 80%;
       height: 80%;
-
-      animation: wave-two 1.75s infinite;
     }
   }
 
   &.sound--stop .sound__wave {
     border-radius: 0;
-    width: 0.75rem;
-    height: 0.75rem;
+    width: 0.625rem;
+    height: 0.625rem;
     border-width: 0 0.125rem 0 0;
-
-    animation: none;
 
     &.sound__wave--one {
       transform: rotate(45deg) translate3d(0, -50%, 0);
@@ -72,5 +68,14 @@
     &.sound__wave--two {
       transform: rotate(-45deg) translate3d(0, 50%, 0);
     }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 479px) {
+    top: 1rem;
+    right: 1rem;
   }
 }

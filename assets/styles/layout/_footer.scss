@@ -1,21 +1,33 @@
 .footer {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
   position: absolute;
   bottom: 0;
 
   width: 100%;
-  padding: 2rem 1rem;
+  max-width: 60rem;
 
-  .footer__copy {
-    margin: 0.5rem 0;
+  padding: 2rem 1rem 1rem;
+
+  .footer__about {
+    display: block;
+
+    margin: 1.5rem 0 0;
     font-size: 0.75rem;
-    color: #999;
+    color: rgba($color-white, 0.75);
 
     .footer__copy-link {
-      margin: 0;
+      margin-left: 0.375rem;
+      text-decoration: none;
+      border-bottom: solid 1px;
+
+      transition: border 0.25s;
+
+      &:hover {
+        border-bottom-color: transparent;
+      }
     }
   }
 
@@ -24,9 +36,5 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: flex-start;
-  }
-
-  @media screen and (max-width: 479px) {
-    margin-top: 2rem;
   }
 }
