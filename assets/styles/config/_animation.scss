@@ -14,47 +14,38 @@
 }
 
 
-@keyframes dance-1 {
-  from {
-    height: 2px;
+@keyframes wave-one {
+  0% {
+    opacity: 0;
   }
-  to {
-    height: 22px;
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
 
-@keyframes dance-2 {
-  from {
-    height: 2px;
+@keyframes wave-two {
+  0% {
+    opacity: 0;
   }
-  to {
-    height: 15px;
-  }
-}
 
-@keyframes dance-3 {
-  from {
-    height: 2px;
+  40% {
+    opacity: 1;
   }
-  to {
-    height: 30px;
-  }
-}
 
-@keyframes dance-4 {
-  from {
-    height: 2px;
+  60% {
+    opacity: 1;
   }
-  to {
-    height: 20px;
-  }
-}
 
-@keyframes dance-5 {
-  from {
-    height: 2px;
-  }
-  to {
-    height: 15px;
+  100% {
+    opacity: 0;
   }
 }

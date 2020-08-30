@@ -26,11 +26,6 @@
 </head>
 
 <body>
-    <!--
-    <audio id="audio" preload="none" loop>
-        <source src="/media/audio.mp3" type="audio/mpeg">
-    </audio>
--->
     <figure class="background">
         <video id="video" preload="auto" loop muted playsinline autoplay>
             <source src="/media/2.mp4" type="video/mp4">
@@ -66,12 +61,13 @@
         </h2>
 
         <div class="sound sound--stop" id="sound">
-            <div class="sound__bar"></div>
-            <div class="sound__bar"></div>
-            <div class="sound__bar"></div>
-            <div class="sound__bar"></div>
-            <div class="sound__bar"></div>
-        </div>
+            <svg class="sound__icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                <path d="M643.369 53.895v916.21q0 21.895-16 37.894t-37.894 16-37.894-16l-280.422-280.422h-220.631q-21.895 0-37.894-16t-16-37.894v-323.369q0-21.895 16-37.894t37.894-16h220.631l280.422-280.422q16-16 37.894-16t37.894 16 16 37.894z"></path>
+            </svg>
+
+            <div class="sound__wave sound__wave--one"></div>
+            <div class="sound__wave sound__wave--two"></div>
+          </div>
     </div>
 
     <footer class="footer">

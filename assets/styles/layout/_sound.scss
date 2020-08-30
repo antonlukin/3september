@@ -1,8 +1,8 @@
 .sound {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
   position: fixed;
+  align-items: center;
+
   top: 1.5rem;
   left: 1.5rem;
   z-index: 5;
@@ -11,33 +11,66 @@
 
   height: 2rem;
   width: 2rem;
-  padding: 0.25rem;
-  margin: 0 auto;
-  overflow: hidden;
 
-  .sound__bar {
+  .sound__icon {
+    fill: $color-white;
+
     display: block;
 
-    height: 2px;
-    width: 2px;
-    background-color: #ddd;
-
-    @for $i from 1 through 6 {
-      &:nth-child(#{$i}) {
-        animation-name: dance-#{$i};
-        animation-delay: 0.2s * $i;
-      }
-    }
-
-    animation-duration: 500ms;
-    animation-play-state: running;
-    animation-direction: alternate;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    width: 75%;
+    height: 75%;
   }
 
-  &.sound--stop .sound__bar {
+  .sound__wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    box-sizing: content-box;
+
+    border: 0.125rem solid transparent;
+    border-right: 0.125rem solid $color-white;
+    border-radius: 50%;
+    transition: all 0.25s;
+
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &.sound__wave--one {
+      width: 45%;
+      height: 45%;
+
+      animation: wave-one 1.75s infinite;
+    }
+
+    &.sound__wave--two {
+      width: 80%;
+      height: 80%;
+
+      animation: wave-two 1.75s infinite;
+    }
+  }
+
+  &.sound--stop .sound__wave {
+    border-radius: 0;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-width: 0 0.125rem 0 0;
+
     animation: none;
-    animation-name: none;
+
+    &.sound__wave--one {
+      transform: rotate(45deg) translate3d(0, -50%, 0);
+    }
+
+    &.sound__wave--two {
+      transform: rotate(-45deg) translate3d(0, 50%, 0);
+    }
   }
 }

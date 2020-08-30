@@ -4,6 +4,9 @@
 // Font variables
 $font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
 
+// Color variables
+$color-white: #fff;
+
 html {
   height: 100%;
 }
@@ -24,7 +27,7 @@ body {
   font-weight: normal;
   font-family: $font-system;
 
-  color: #fff;
+  color: $color-white;
   background-color: #000;
 
   -webkit-text-size-adjust: none;

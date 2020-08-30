@@ -111,25 +111,17 @@
   sound.addEventListener('click', function (e) {
     e.preventDefault();
 
-    if (video.muted) {
-      return video.muted = false;
+    // Send sound stop class
+    sound.classList.add('sound--stop');
+
+    if (!video.muted) {
+      return video.muted = true;
     }
 
-    return video.muted = true;
-  });
-
-  /**
-   * Handle video pause event
-   */
-  video.addEventListener('pause', function() {
-    sound.classList.add('sound--stop');
-  });
-
-  /**
-   * Handle video play event
-   */
-  video.addEventListener('playing', function() {
+    // Remove stop class
     sound.classList.remove('sound--stop');
+
+    return video.muted = false;
   });
 
   /**
