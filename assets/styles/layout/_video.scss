@@ -1,38 +1,16 @@
 .background {
-  display: block;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-
-  width: 100%;
-  height: 100%;
-
-  video {
-    display: block;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-  }
+  @include full-size('block', 'fixed');
 
   &::after {
+    @include full-size('block', 'absolute');
+
     content: '';
+    background-color: rgba(0, 0, 0, 0.625);
+  }
 
-    position: absolute;
-    top: 0;
-    left: 0;
+  video {
+    @include full-size('block', 'absolute');
 
-    width: 100%;
-    height: 100%;
-
-    background-color: rgba(0, 0, 0, 0.85);
+    object-fit: cover;
   }
 }

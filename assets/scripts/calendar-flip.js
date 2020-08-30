@@ -18,15 +18,13 @@
 
 
   /**
-   * Audio element
+   * Video element
    */
-  var audio = document.getElementById('audio');
+  var video = document.getElementById('video');
 
 
-  /**
-   * Store user sound choice
-   */
-  var muted = false;
+  //var audio = new Video('/media/audio.mp3');
+  //audio.preload = 'auto';
 
   /**
    * Current user turn counter
@@ -113,27 +111,24 @@
   sound.addEventListener('click', function (e) {
     e.preventDefault();
 
-    muted = true;
-
-    if (document.getElementById('audio').paused) {
-      muted = false;
-      return audio.play();
+    if (video.muted) {
+      return video.muted = false;
     }
 
-    return audio.pause();
+    return video.muted = true;
   });
 
   /**
-   * Handle audio pause event
+   * Handle video pause event
    */
-  audio.addEventListener('pause', function() {
+  video.addEventListener('pause', function() {
     sound.classList.add('sound--stop');
   });
 
   /**
-   * Handle audio play event
+   * Handle video play event
    */
-  audio.addEventListener('playing', function() {
+  video.addEventListener('playing', function() {
     sound.classList.remove('sound--stop');
   });
 
@@ -153,7 +148,7 @@
       }
 
       // Start sound if paused
-      if (!muted && document.getElementById('audio').paused) {
+      if (video.muted) {
         sound.click();
       }
 
