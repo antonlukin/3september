@@ -1,0 +1,63 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "a0eca3d4453c56119340a7bae0f1a9c1",
+    "packages": [
+        {
+            "name": "antonlukin/image-text",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/antonlukin/image-text.git",
+                "reference": "7c61cf649c2c1aa73d7f244551b30a0aa426ba80"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/antonlukin/image-text/zipball/7c61cf649c2c1aa73d7f244551b30a0aa426ba80",
+                "reference": "7c61cf649c2c1aa73d7f244551b30a0aa426ba80",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/ImageText.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anton Lukin",
+                    "email": "anton@lukin.me"
+                }
+            ],
+            "description": "Wrapper for PHP's GD Library for easy image manipulation",
+            "homepage": "https://lukin.me",
+            "keywords": [
+                "gd",
+                "image",
+                "php",
+                "text"
+            ],
+            "time": "2020-08-30T23:13:19+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "antonlukin/image-text": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

@@ -16,17 +16,16 @@
    */
   var sound = document.getElementById('sound');
 
-
   /**
    * Video element
    */
   var video = document.getElementById('video');
 
-
   /**
    * Current user turn counter
    */
   var counter = 0;
+
 
   /**
    * Add spaces to number
@@ -34,6 +33,7 @@
   function spaces(number) {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   }
+
 
   /**
    * Sanitize number
@@ -49,6 +49,7 @@
 
     return spaces(number) + " раза";
   }
+
 
   /**
    * Connect the socket
@@ -71,6 +72,7 @@
     };
   }
 
+
   /**
    * Reconnecting socket
    */
@@ -79,6 +81,7 @@
       return connect();
     }
   }
+
 
   /**
    * Turnover calendar
@@ -102,6 +105,67 @@
     page.addEventListener('animationend', stopFlip);
   }
 
+
+  /**
+   * Get random number
+   */
+  function randomize(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+
+  /**
+   * Encrypt counter hash
+   */
+  function encrypt(counter, hash) {
+    counter = counter.split('');
+
+    for (var i = 0, j = 0; i < counter.length * 3; i++) {
+      var item = randomize(10, 15).toString(16);
+
+      if (i % 3 === 1) {
+        item = (9 - counter[j++]).toString();
+      }
+
+      hash = hash + item;
+    }
+
+    return hash;
+  }
+
+
+  /**
+   * Open share popup window
+   */
+  function sharing(url, network, params) {
+    url = url + '/social/' + encrypt(counter.toString(), '');
+
+    var title = document.querySelector('.counter--title').textContent;
+    title = title.trim() + ' и снова третье сентября';
+
+    if (['vkontakte', 'odnoklassniki'].indexOf(network) >= 0) {
+      url = url + '&title=' + encodeURIComponent(title);
+    }
+
+    if (['twitter', 'telegram'].indexOf(network) >= 0) {
+      url = url + '&text=' + encodeURIComponent(title);
+    }
+
+    var left = Math.round(screen.width / 2 - params.width / 2);
+    var top = 0;
+
+    if (screen.height > params.height) {
+      top = Math.round(screen.height / 3 - params.height / 2);
+    }
+
+    return window.open(url, params.id, 'left=' + left + ',top=' + top + ',' +
+      'width=' + params.width + ',height=' + params.height + ',personalbar=0,toolbar=0,scrollbars=1,resizable=1');
+  }
+
+
   /**
    * Handle sound button
    */
@@ -120,6 +184,7 @@
 
     return video.muted = false;
   });
+
 
   /**
    * Flip calendar event
@@ -145,6 +210,7 @@
     }
   });
 
+
   /**
    * Update common counter once per 5s
    */
@@ -154,12 +220,14 @@
     }
   }, 5000);
 
+
   /**
    * Update counter with local storage value
    */
   if (localStorage.getItem('count')) {
     counter = parseInt(localStorage.getItem('count'));
   }
+
 
   /**
    * Flip calendar on window load
@@ -168,6 +236,23 @@
     return turnover();
   });
 
+
+  /**
+   * Get all share buttons to add event and counter
+   */
+  var links = document.querySelectorAll('.share');
+
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function (e) {
+      e.preventDefault();
+
+      return sharing(this.href, this.dataset.label, {
+        width: 600,
+        height: 400,
+        id: this.dataset.label
+      })
+    });
+  }
 
   //return connect();
 })();

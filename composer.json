@@ -1,0 +1,5 @@
+{
+    "require": {
+        "antonlukin/image-text": "dev-master"
+    }
+}
