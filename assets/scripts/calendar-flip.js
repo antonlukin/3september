@@ -219,7 +219,7 @@
   /**
    * Flip calendar on window load
    */
-  window.addEventListener('load', function () {
+  document.addEventListener('DOMContentLoaded', function () {
     return turnover();
   });
 
