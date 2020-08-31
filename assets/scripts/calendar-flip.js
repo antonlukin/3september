@@ -254,5 +254,5 @@
     });
   }
 
-  //return connect();
+  return connect();
 })();
