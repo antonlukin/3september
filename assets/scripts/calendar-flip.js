@@ -123,10 +123,10 @@
   function encrypt(counter, hash) {
     counter = counter.split('');
 
-    for (var i = 0, j = 0; i < counter.length * 3; i++) {
+    for (var i = 0, j = 0; i < counter.length * 3 || i < 10; i++) {
       var item = randomize(10, 15).toString(16);
 
-      if (i % 3 === 1) {
+      if (i % 3 === 1 && j < counter.length) {
         item = (9 - counter[j++]).toString();
       }
 
