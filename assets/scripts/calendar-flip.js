@@ -143,17 +143,6 @@
   function sharing(url, network, params) {
     url = url + '/social/' + encrypt(counter.toString(), '');
 
-    var title = document.querySelector('.counter--title').textContent;
-    title = title.trim() + ' и снова третье сентября';
-
-    if (['vkontakte', 'odnoklassniki'].indexOf(network) >= 0) {
-      url = url + '&title=' + encodeURIComponent(title);
-    }
-
-    if (['twitter', 'telegram'].indexOf(network) >= 0) {
-      url = url + '&text=' + encodeURIComponent(title);
-    }
-
     var left = Math.round(screen.width / 2 - params.width / 2);
     var top = 0;
 
