@@ -39,15 +39,13 @@
    * Sanitize number
    */
   function sanitize(number) {
-    if (number > 9 && number < 20) {
-      return spaces(number) + " раз";
-    }
+    var cases = [2, 0, 1, 1, 1, 2];
+    var forms = [' раз', ' раза', ' раз'];
 
-    if (number % 10 < 2 || number % 10 > 4) {
-      return spaces(number) + " раз";
-    }
+    // https://gist.github.com/realmyst/1262561
+    var title = forms[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
 
-    return spaces(number) + " раза";
+    return spaces(number) + title;
   }
 
 
