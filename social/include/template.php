@@ -14,11 +14,20 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <title>3 сентября – день, когда горят костры рябин.</title>
+
+    <style>
+        body {
+            padding: 2rem;
+            font: normal 14px/1.25 sans-serif;
+        }
+    </style>
 </head>
 
 <body>
     <script type="text/javascript">
         window.location.href = 'https://3september.ru';
     </script>
+
+    <a href="https://3september.ru">Перейти на сайт</a>
 </body>
 </html>
