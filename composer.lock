@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonlukin/image-text.git",
-                "reference": "7c61cf649c2c1aa73d7f244551b30a0aa426ba80"
+                "reference": "3bbe35cbb238782cde980b9b5d2a0f3a094ffa4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonlukin/image-text/zipball/7c61cf649c2c1aa73d7f244551b30a0aa426ba80",
-                "reference": "7c61cf649c2c1aa73d7f244551b30a0aa426ba80",
+                "url": "https://api.github.com/repos/antonlukin/image-text/zipball/3bbe35cbb238782cde980b9b5d2a0f3a094ffa4e",
+                "reference": "3bbe35cbb238782cde980b9b5d2a0f3a094ffa4e",
                 "shasum": ""
             },
             "require": {
@@ -47,7 +47,7 @@
                 "php",
                 "text"
             ],
-            "time": "2020-08-30T23:13:19+00:00"
+            "time": "2020-08-30T23:43:08+00:00"
         }
     ],
     "packages-dev": [],
