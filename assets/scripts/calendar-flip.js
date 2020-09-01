@@ -217,11 +217,22 @@
 
 
   /**
-   * Flip calendar on window load
+   * Load calendar image and flip it than
    */
-  document.addEventListener('DOMContentLoaded', function () {
-    return turnover();
-  });
+  var image = new Image();
+  image.src = '/images/calendar.jpg';
+
+  image.onload = function() {
+    var items = calendar.querySelectorAll('.calendar__page-front');
+
+    for (var i = 0; i < items.length; i++) {
+      items[i].style.backgroundImage = 'url(' + image.src + ')';
+    }
+
+    setTimeout(function() {
+      return turnover();
+    }, 500)
+  }
 
 
   /**
