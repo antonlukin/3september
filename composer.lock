@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a0eca3d4453c56119340a7bae0f1a9c1",
+    "content-hash": "c200319aa8756003852ab91ee426aa77",
     "packages": [
         {
             "name": "antonlukin/image-text",
@@ -48,6 +48,60 @@
                 "text"
             ],
             "time": "2020-08-30T23:43:08+00:00"
+        },
+        {
+            "name": "antonlukin/poster-editor",
+            "version": "5.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/antonlukin/poster-editor.git",
+                "reference": "a201ea1a20b263fa529af5c521290f0f8e8f79ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/antonlukin/poster-editor/zipball/a201ea1a20b263fa529af5c521290f0f8e8f79ef",
+                "reference": "a201ea1a20b263fa529af5c521290f0f8e8f79ef",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+                "phpcompatibility/php-compatibility": "^9.3"
+            },
+            "suggest": {
+                "ext-gd": "to use GD library based image processing."
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/PosterEditor.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anton Lukin",
+                    "email": "anton@lukin.me"
+                }
+            ],
+            "description": "Wrapper for PHP's GD Library for easy image manipulation",
+            "homepage": "https://github.com/antonlukin/poster-editor",
+            "keywords": [
+                "gd",
+                "image",
+                "php",
+                "text"
+            ],
+            "support": {
+                "issues": "https://github.com/antonlukin/poster-editor/issues",
+                "source": "https://github.com/antonlukin/poster-editor/tree/v5.3"
+            },
+            "time": "2021-09-01T20:42:02+00:00"
         }
     ],
     "packages-dev": [],
@@ -59,5 +113,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }

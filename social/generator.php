@@ -6,6 +6,8 @@
  * @version 1.0
  */
 
+use PosterEditor\PosterEditor;
+
 require __DIR__ . '/../vendor/autoload.php';
 
 
@@ -72,22 +74,24 @@ function decrypt($path, $count = 0)  {
 
     // Generate cover if not exists
     if (!file_exists(__DIR__ . $image)) {
-        $poster = __DIR__ . '/include/poster.png';
+        try {
+            $poster = new PosterEditor();
+            $poster->make(__DIR__ . '/include/poster.png');
 
-        $cover = new ImageText();
-        $cover->setDimensionsFromImage($poster)->draw($poster);
-        $cover->setOutput('jpg');
-        $cover->setQuality(95);
+            $poster->text($title, array(
+                'x'          => 50,
+                'y'          => 440,
+                'width'      => 1100,
+                'fontsize'   => 24,
+                'fontpath'   => __DIR__ . '/include/opensans.ttf',
+                'horizontal' => 'center',
+                'color'      => '#ffffff',
+            ));
 
-        // Set font settings
-        $cover->setFont(__DIR__ . '/include/opensans.ttf');
-
-        // Draw poster text
-        $cover->text([
-            'text' => $title, 'x' => 50, 'y' => 440, 'width' => 1100, 'fontSize' => 24, 'alignHorizontal' => 'center'
-        ]);
-
-        $cover->save(__DIR__ . $image);
+            $poster->save(__DIR__ . $image);
+        } catch(Exception $e) {
+            $image = "/posters/default.jpg";
+        }
     }
 
     // Show generator template

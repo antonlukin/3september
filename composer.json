@@ -1,5 +1,5 @@
 {
     "require": {
-        "antonlukin/image-text": "dev-master"
+        "antonlukin/poster-editor": "^5.3"
     }
 }
