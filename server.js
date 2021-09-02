@@ -8,7 +8,6 @@
  * @since       2.0.0
  */
 
-//const websocket = require('ws');
 const redis = require('redis');
 const express = require('express');
 
