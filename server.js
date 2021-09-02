@@ -8,20 +8,18 @@
  * @since       2.0.0
  */
 
-const websocket = require('ws');
+//const websocket = require('ws');
 const redis = require('redis');
+const express = require('express');
 
-/**
- * Create websocket server
- */
-const server = new websocket.Server({
-  port: process.env.PORT || 3002
-});
+const app = express();
+const websocket = require('express-ws')(app);
 
 /**
  * Create redis clinet
  */
 const database = redis.createClient();
+
 
 /**
  * Get current counter from redis
@@ -34,36 +32,68 @@ function sendCounter(socket) {
       counter = parseInt(result);
     }
 
-    if (socket.readyState === websocket.OPEN) {
+    if (socket.readyState === 1) {
       socket.send(counter);
     }
   });
 }
 
+
 /**
- * Setup server connection
+ * Some required express settings
  */
-server.on('connection', function (socket, req) {
+app.use(express.json());
+app.disable('x-powered-by');
+
+
+/**
+ * Update counter via AJAX
+ */
+app.post('/update/', function(req, res, next) {
+  if (req.headers.origin !== 'https://3september.ru') {
+    return next();
+  }
+
+  if (req.body.data === 'counter') {
+    database.incr('3september:counter');
+  }
+
+  res.status(200).json({
+    'success': true,
+  });
+});
+
+
+/**
+ * Send current counter via websocket
+ */
+app.ws('/receive/', function(socket, req) {
   if (req.headers.origin !== 'https://3september.ru') {
     return socket.close();
   }
 
-  // Send current counter on connect
   sendCounter(socket);
 
-  // Flip event message
   socket.on('message', function (data, req) {
-    if (data === 'update') {
-      database.incr('3september:counter');
-    }
-  });
-
-
-  // Receive event message
-  socket.on('message', function (data, req) {
-    if (data === 'receive') {
+    if (data === 'counter') {
       sendCounter(socket);
     }
   });
-
 });
+
+
+/**
+ * Final middleware.
+ */
+app.use(function(req, res) {
+  res.status(400).json({
+    'success': false,
+  });
+});
+
+
+/**
+ * Let's start express app
+ */
+app.listen(process.env.PORT || 3002);
+

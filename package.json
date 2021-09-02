@@ -1,8 +1,8 @@
 {
   "name": "3september",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": "Anton Lukin",
-  "description": "3septemver.ru public repository",
+  "description": "3september.ru public repository",
   "main": "server.js",
   "license": "MIT",
   "repository": {
@@ -13,8 +13,9 @@
     "start": "nodemon server.js"
   },
   "dependencies": {
-    "redis": "^2.8.0",
-    "ws": "^5.1.1"
+    "express": "^4.17.1",
+    "express-ws": "^5.0.2",
+    "redis": "^2.8.0"
   },
   "browserslist": [
     "ie >= 10",

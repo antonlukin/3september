@@ -53,7 +53,7 @@
    * Connect the socket
    */
   function connect() {
-    client = new WebSocket('wss://3september.ru:8000');
+    client = new WebSocket('wss://3september.ru/receive/');
 
     client.onmessage = function (e) {
       var more = document.querySelector('.counter--more');
@@ -179,14 +179,18 @@
   calendar.addEventListener('click', function (e) {
     e.preventDefault();
 
+    var formdata = JSON.stringify({data: 'counter'});
+
     // Flip calendar only once per 1.5s
     if (Date.now() - clicked > 1500) {
       clicked = Date.now();
 
-      // Send update message to server
-      if (client && client.readyState == WebSocket.OPEN) {
-        client.send('update');
-      }
+      var request = new XMLHttpRequest();
+
+      request.open('POST', 'https://3september.ru/update/');
+      request.setRequestHeader('Content-type', 'application/json');
+
+      request.send(formdata);
 
       // Start sound if paused
       if (!sound.classList.contains('sound--clicked') && video.muted) {
@@ -203,7 +207,7 @@
    */
   setInterval(function () {
     if (client && client.readyState == WebSocket.OPEN) {
-      client.send('receive');
+      client.send('counter');
     }
   }, 5000);
 
