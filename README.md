@@ -2,7 +2,9 @@
 
 Comic site for the song-meme of Mikhail Shufutinsky. The repository is open for your pull requests and suggestions.
 
-![Analytics](https://user-images.githubusercontent.com/454185/131751344-bc88572d-1fd9-4887-9ee2-ee024090ae69.png)
+## Analytics
+
+![Analytics](https://user-images.githubusercontent.com/454185/160441001-483170c5-21ee-4c7c-bb40-f67994d6d31e.png)
 
 ## Press about us
 
