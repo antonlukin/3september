@@ -1,0 +1,37 @@
+.micro {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 5;
+
+  cursor: pointer;
+
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.75;
+
+  background-color: transparent;
+  border: none;
+
+  .micro__icon {
+    fill: $color-white;
+
+    display: block;
+
+    width: 75%;
+    height: 75%;
+  }
+
+  &.micro--active {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 479px) {
+    top: 1rem;
+    left: 1rem;
+  }
+}

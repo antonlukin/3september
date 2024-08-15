@@ -10,7 +10,8 @@
     "url": "https://github.com/antonlukin/3september.git"
   },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "watch": "gulp"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -27,15 +28,16 @@
     "android >= 4.4"
   ],
   "devDependencies": {
-    "gulp": "^4.0.2",
+    "gulp": "^5.0",
     "gulp-autoprefixer": "^7.0.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.7.0",
     "gulp-flatten": "^0.4.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.0",
     "gulp-sass-glob": "^1.1.0",
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.77.8"
   }
 }

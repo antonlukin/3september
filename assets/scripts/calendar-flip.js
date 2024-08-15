@@ -22,6 +22,16 @@
   var video = document.getElementById('video');
 
   /**
+   * Video element
+   */
+  var micro = document.getElementById('micro');
+
+  /**
+   * Karaoke text element
+   */
+  var karaoke = document.getElementById('karaoke');
+
+  /**
    * Current user turn counter
    */
   var counter = 0;
@@ -154,10 +164,25 @@
 
 
   /**
+   * Handle micro button
+   */
+  micro.addEventListener('click', function (e) {
+    micro.classList.toggle('micro--active');
+
+    var active = micro.classList.contains('micro--active');
+    karaoke.classList.toggle('karaoke--active', active);
+
+    sound.classList.remove('sound--stop');
+    video.muted = false;
+  });
+
+  /**
    * Handle sound button
    */
   sound.addEventListener('click', function (e) {
     e.preventDefault();
+
+    video.currentTime = 260;
 
     // Update sound classes
     sound.classList.add('sound--stop', 'sound--clicked');
@@ -170,6 +195,25 @@
     sound.classList.remove('sound--stop');
 
     return video.muted = false;
+  });
+
+
+  /**
+   * Update karaoke lines
+   */
+  video.addEventListener('timeupdate', function() {
+    var lines = karaoke.querySelectorAll('p');
+
+    for(var i = 0; i < lines.length; i++) {
+      var start = parseFloat(lines[i].getAttribute('data-start'));
+      var end = i < lines.length - 1 ? parseFloat(lines[i + 1].getAttribute('data-start')) : video.duration;
+
+      if (video.currentTime >= start && video.currentTime <= end) {
+        lines[i].classList.add('karaoke__line--active');
+      } else {
+        lines[i].classList.remove('karaoke__line--active')
+      }
+    }
   });
 
 

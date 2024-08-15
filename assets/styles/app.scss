@@ -1,10 +1,6 @@
-// Setup default styles
 @import "config/*.scss";
 
-// Font variables
 $font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
-
-// Color variables
 $color-white: #fff;
 
 html {
@@ -42,5 +38,4 @@ body {
   background-color: rgba(silver, 0.25);
 }
 
-// Import layout styles
 @import "layout/*.scss";

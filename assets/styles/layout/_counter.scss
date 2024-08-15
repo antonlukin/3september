@@ -6,12 +6,12 @@
 
   width: 100%;
   text-align: center;
-  font-weight: 400;
   letter-spacing: 0.5px;
 
   &.counter--title {
     margin-top: 2.5rem;
-    font-size: 1.625rem;
+    font-size: 1.75rem;
+    font-weight: 500;
 
     @media screen and (max-width: 479px) {
       margin-top: 1.5rem;
@@ -22,6 +22,7 @@
   &.counter--more {
     margin-top: 0.75rem;
     font-size: 1rem;
+    font-weight: 400;
 
     @media screen and (max-width: 479px) {
       font-size: 0.875rem;

@@ -1,0 +1,51 @@
+.karaoke {
+  display: none;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 10;
+
+  width: 100%;
+  margin: 3.25rem 0 1.5rem;
+
+  border-radius: 0.75rem;
+
+  .karaoke__line {
+    display: none;
+    text-align: center;
+
+    font-size: 1.75rem;
+    font-weight: 500;
+    opacity: 0;
+
+    transition: opacity 0.625s ease-in-out;
+
+    &.karaoke__line--active {
+      display: block;
+      opacity: 1;
+    }
+
+    &.karaoke__line--active + .karaoke__line {
+      display: block;
+      opacity: 0.375;
+    }
+
+    &.karaoke__line--active + .karaoke__line + .karaoke__line {
+      display: block;
+      opacity: 0.15;
+    }
+
+    @media screen and (max-width: 479px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &.karaoke--active {
+    display: flex;
+  }
+
+  &.karaoke--active ~ .counter {
+    display: none;
+  }
+}
