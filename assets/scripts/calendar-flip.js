@@ -182,8 +182,6 @@
   sound.addEventListener('click', function (e) {
     e.preventDefault();
 
-    video.currentTime = 260;
-
     // Update sound classes
     sound.classList.add('sound--stop', 'sound--clicked');
 
